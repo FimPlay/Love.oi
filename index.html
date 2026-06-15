@@ -8,76 +8,86 @@
 <style>
 *{
 margin:0;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для моей лапочки ❤️</title>
+
+<style>
+*{
+margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
+-webkit-tap-highlight-color:transparent;
 }
 
 body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:linear-gradient(135deg,#ff8fab,#ffc2d1,#ffe5ec);
 min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 overflow:hidden;
-background:linear-gradient(-45deg,#ff8fb1,#ffb3c6,#ffc2d1,#ffd6e0);
-background-size:400% 400%;
-animation:bg 12s ease infinite;
-padding:20px;
-}
-
-@keyframes bg{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+padding:15px;
 }
 
 .card{
-max-width:800px;
 width:100%;
-background:rgba(255,255,255,0.18);
+max-width:700px;
+background:rgba(255,255,255,.2);
 backdrop-filter:blur(15px);
-padding:35px;
-border-radius:30px;
-text-align:center;
+padding:25px;
+border-radius:25px;
 color:white;
-box-shadow:0 10px 40px rgba(0,0,0,.15);
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 z-index:10;
-animation:appear 1s ease;
-}
-
-@keyframes appear{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
 }
 
 h1{
-font-size:2.2rem;
+font-size:28px;
 margin-bottom:20px;
 }
 
 p{
+font-size:17px;
 line-height:1.8;
-font-size:1.1rem;
 }
 
-.heart-btn{
-font-size:90px;
+.heartBtn{
+background:none;
+border:none;
 cursor:pointer;
 margin-top:25px;
-display:inline-block;
-animation:pulse 1.4s infinite;
-user-select:none;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width:180px;
+height:180px;
+margin-left:auto;
+margin-right:auto;
+animation:pulse 1.5s infinite;
+touch-action:manipulation;
+}
+
+.heart{
+font-size:100px;
+}
+
+.btnText{
+color:white;
+font-size:18px;
+font-weight:bold;
+margin-top:5px;
 }
 
 @keyframes pulse{
 0%{transform:scale(1);}
-50%{transform:scale(1.15);}
+50%{transform:scale(1.12);}
 100%{transform:scale(1);}
 }
 
@@ -85,69 +95,108 @@ user-select:none;
 display:none;
 }
 
-.love-text{
-max-height:65vh;
-overflow:auto;
-padding-right:10px;
+.letter{
 text-align:left;
-margin-top:20px;
+max-height:65vh;
+overflow-y:auto;
+padding-right:5px;
 }
 
-.love-text p{
+.letter p{
 margin-bottom:18px;
 }
 
-.heart{
-position:absolute;
-color:white;
+.finish{
+text-align:center;
+font-size:28px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.fallingHeart{
+position:fixed;
+top:-30px;
+pointer-events:none;
 animation:fall linear forwards;
-opacity:.8;
+z-index:1;
 }
 
 @keyframes fall{
-from{
-transform:translateY(-10vh);
-}
 to{
 transform:translateY(110vh);
 }
 }
+
+@media(max-width:600px){
+
+.card{
+padding:20px;
+}
+
+h1{
+font-size:24px;
+}
+
+p{
+font-size:16px;
+}
+
+.heart{
+font-size:110px;
+}
+
+.letter{
+max-height:60vh;
+}
+
+}
 </style>
 </head>
+
 <body>
 
 <div class="card">
 
-<div id="start">
+<div id="page1">
 
 <h1>Для моей лапочки ❤️</h1>
 
 <p>
 Лапонька моя, не грусти пожалуйста 🥹❤️❤️❤️
 <br><br>
+
 Не знаю, испортилось ли у тебя настроение из-за меня,
-но если да, то прости меня пожалуйста, лапка моя 🥺👉👈
+но если да, то прости меня пожалуйста лапка моя 🥺👉👈
+
 <br><br>
+
 Я тебя безумно и очень сильно люблю ❤️💋💋💋
-Ты у меня самая лучшая девочка на свете.
+
+Ты у меня самая лучшая девочка на свете 🥹
+
 <br><br>
-Я тут сделал для тебя маленький подарочек 🥹❤️
-Надеюсь, тебе будет приятно и я хоть немножко поднял тебе настроение, лапонька моя.
+
+Я тебе тут подарочек сделал ❤️
+
+Надеюсь тебе будет приятно и я тебе хоть немного поднял настроение лапка моя 🥹❤️
+
 <br><br>
-Нажми на сердечко ❤️👇
+
+Нажми на сердечко 👇❤️
 </p>
 
-<div class="heart-btn" onclick="openLetter()">
-❤️
-</div>
+<button class="heartBtn" onclick="openLetter()">
+<div class="heart">❤️</div>
+<div class="btnText">Нажми на меня</div>
+</button>
 
 </div>
 
-<div id="letter" class="hidden">
+<div id="page2" class="hidden">
 
 <h1>Для тебя, лапка моя ❤️</h1>
 
-<div class="love-text">
+<div class="letter">
 
 <p>
 Лапка моя ❤️
@@ -158,70 +207,66 @@ transform:translateY(110vh);
 </p>
 
 <p>
-Я очень рад, что однажды встретил именно тебя.
+Я очень рад, что встретил именно тебя.
 Правда.
-Из всех людей на свете мне досталась именно ты,
-и я до сих пор считаю это самым лучшим подарком в моей жизни 🥹❤️
+Это одно из самых лучших событий в моей жизни.
 </p>
 
 <p>
-Ты делаешь мои дни счастливее просто тем,
-что ты есть.
-Мне нравится разговаривать с тобой,
-смеяться с тобой,
-думать о тебе,
-ждать твоих сообщений
-и просто знать, что ты есть у меня ❤️
+Я очень благодарен судьбе за то, что она подарила мне тебя 🥹❤️❤️
 </p>
 
 <p>
-Мне нравится твоя улыбка,
-твой голос,
-твой характер,
-твои милые моменты,
-даже когда ты вредничаешь немножко 🥰
+Мне нравится твоя улыбка🥹❤️❤️
+Мне нравится твой голос🥹❤️❤️
+Мне нравится твой смех🥹❤️❤️
+Мне нравится всё, что связано с тобой 🥹❤️❤️❤️
 </p>
 
 <p>
-И даже если у тебя бывают тяжёлые дни,
-даже если тебе грустно,
-даже если всё бесит и хочется просто спрятаться под одеяло —
-я всё равно хочу быть рядом с тобой, лапка моя ❤️
+Ты делаешь мои дни лучше просто тем, что ты есть
+Даже обычный день становится особенным, когда я разговариваю с тобой 😭🥹❤️❤️
 </p>
 
 <p>
-Я хочу обнимать тебя,
-поддерживать тебя,
-заботиться о тебе
-и делать всё возможное,
-чтобы ты чаще улыбалась 🥹💋
+И даже когда тебе грустно
+Даже когда всё бесит
+Даже когда тебе тяжело
+Я всё равно хочу быть рядом с тобой лапка моя ❤️
 </p>
 
 <p>
-Я тебя безумно люблю.
-Очень сильно люблю.
-Сильнее, чем могу объяснить словами ❤️
+Я хочу поддерживать тебя
+Обнимать тебя
+Заботиться о тебе
+Радоваться вместе с тобой
+И просто быть рядом 🥹💋
 </p>
 
 <p>
-И пожалуйста помни:
+Я тебя безумно люблю
+Очень сильно люблю
+И буду любить ещё сильнее 🥹❤️❤️
+</p>
+
+<p>
+Пожалуйста помни..
 что бы ни случилось,
-я всегда буду рядом с тобой.
+я всегда рядом.
 В хорошие дни.
 В плохие дни.
-В грустные дни.
 В счастливые дни.
+В грустные дни.
 Всегда ❤️
 </p>
 
 <p>
-Спасибо тебе за то,
-что ты есть у меня, лапонька моя.
+Спасибо тебе за то, что ты есть у меня 🥹❤️❤️❤️
 </p>
 
-<p style="text-align:center;font-size:1.4rem;">
+<div class="finish">
 ❤️ Я люблю тебя ❤️
-</p>
+</div>
 
 </div>
 
@@ -232,29 +277,51 @@ transform:translateY(110vh);
 <script>
 
 function openLetter(){
-document.getElementById("start").style.display="none";
-document.getElementById("letter").classList.remove("hidden");
+
+document.getElementById("page1").style.display="none";
+document.getElementById("page2").classList.remove("hidden");
+
+for(let i=0;i<60;i++){
+
+let h=document.createElement("div");
+
+h.className="fallingHeart";
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(15+Math.random()*35)+"px";
+h.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},7000);
+
+}
+
 }
 
 function createHeart(){
 
-const heart=document.createElement("div");
+let h=document.createElement("div");
 
-heart.classList.add("heart");
-heart.innerHTML="❤️";
+h.className="fallingHeart";
+h.innerHTML="❤️";
 
-heart.style.left=Math.random()*100+"vw";
-heart.style.fontSize=(15+Math.random()*30)+"px";
-heart.style.animationDuration=(5+Math.random()*6)+"s";
+h.style.left=Math.random()*100+"vw";
+h.style.fontSize=(15+Math.random()*25)+"px";
+h.style.animationDuration=(5+Math.random()*5)+"s";
 
-document.body.appendChild(heart);
+document.body.appendChild(h);
 
 setTimeout(()=>{
-heart.remove();
-},11000);
+h.remove();
+},10000);
+
 }
 
-setInterval(createHeart,250);
+setInterval(createHeart,400);
 
 </script>
 
