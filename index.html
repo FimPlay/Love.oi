@@ -1,329 +1,768 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Для моей лапочки ❤️</title>
+
+<title>Для моей кисули ❤️</title>
 
 <style>
-*{
-margin:0;
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Для моей лапочки ❤️</title>
 
-<style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
--webkit-tap-highlight-color:transparent;
+font-family:Arial,sans-serif;
 }
 
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-background:linear-gradient(135deg,#ff8fab,#ffc2d1,#ffe5ec);
+
 min-height:100vh;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 overflow:hidden;
-padding:15px;
+
+background:
+
+linear-gradient(
+180deg,
+#ffd1e6,
+#fff1f8
+);
+
 }
 
-.card{
-width:100%;
-max-width:700px;
-background:rgba(255,255,255,.2);
+
+.container{
+
+width:90%;
+
+max-width:430px;
+
+background:
+
+rgba(255,255,255,.55);
+
 backdrop-filter:blur(15px);
-padding:25px;
-border-radius:25px;
-color:white;
+
+border-radius:30px;
+
+padding:30px;
+
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-z-index:10;
+
+box-shadow:
+
+0 20px 50px rgba(255,80,150,.25);
+
 }
 
-h1{
-font-size:28px;
-margin-bottom:20px;
-}
-
-p{
-font-size:17px;
-line-height:1.8;
-}
-
-.heartBtn{
-background:none;
-border:none;
-cursor:pointer;
-margin-top:25px;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-width:180px;
-height:180px;
-margin-left:auto;
-margin-right:auto;
-animation:pulse 1.5s infinite;
-touch-action:manipulation;
-}
 
 .heart{
-font-size:100px;
+
+font-size:90px;
+
+animation:
+
+pulse 1.2s infinite;
+
 }
 
-.btnText{
-color:white;
-font-size:18px;
-font-weight:bold;
-margin-top:5px;
-}
 
 @keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.12);}
-100%{transform:scale(1);}
+
+0%,100%{
+
+transform:scale(1);
+
 }
 
-.hidden{
-display:none;
+50%{
+
+transform:scale(1.15);
+
 }
 
-.letter{
-text-align:left;
-max-height:65vh;
-overflow-y:auto;
-padding-right:5px;
 }
 
-.letter p{
-margin-bottom:18px;
-}
 
-.finish{
-text-align:center;
-font-size:28px;
-font-weight:bold;
-margin-top:20px;
-}
-
-.fallingHeart{
-position:fixed;
-top:-30px;
-pointer-events:none;
-animation:fall linear forwards;
-z-index:1;
-}
-
-@keyframes fall{
-to{
-transform:translateY(110vh);
-}
-}
-
-@media(max-width:600px){
-
-.card{
-padding:20px;
-}
 
 h1{
-font-size:24px;
-}
 
-p{
-font-size:16px;
-}
+margin-top:15px;
 
-.heart{
-font-size:110px;
-}
+font-size:32px;
 
-.letter{
-max-height:60vh;
-}
+color:#ff4f98;
 
 }
+
+
+
+.text{
+
+margin-top:20px;
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#d94282;
+
+}
+
+
+
+button{
+
+margin-top:25px;
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:20px;
+
+background:
+
+linear-gradient(
+45deg,
+#ff579e,
+#ff91c7
+);
+
+color:white;
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+
+
+.timer{
+
+margin-top:20px;
+
+color:#ff4f98;
+
+font-weight:bold;
+
+}
+
+
+
+.modal{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+
+rgba(255,170,210,.4);
+
+backdrop-filter:blur(10px);
+
+}
+
+
+
+.box{
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+width:85%;
+
+max-width:360px;
+
+text-align:center;
+
+animation:show .4s;
+
+}
+
+
+
+@keyframes show{
+
+from{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+.message{
+
+font-size:20px;
+
+color:#ff4f98;
+
+line-height:1.6;
+
+}
+
+
+
+.heartFly{
+
+position:fixed;
+
+bottom:-20px;
+
+animation:
+
+fly 5s linear forwards;
+
+}
+
+
+
+@keyframes fly{
+
+from{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
 </style>
+
 </head>
+
 
 <body>
 
-<div class="card">
 
-<div id="page1">
+<div class="container">
 
-<h1>Для моей лапочки ❤️</h1>
 
-<p>
-Лапонька моя, не грусти пожалуйста 🥹❤️❤️❤️
-<br><br>
+<div class="heart">
 
-Не знаю, испортилось ли у тебя настроение из-за меня,
-но если да, то прости меня пожалуйста лапка моя 🥺👉👈
+❤️
 
-<br><br>
+</div>
 
-Я тебя безумно и очень сильно люблю ❤️💋💋💋
 
-Ты у меня самая лучшая девочка на свете 🥹
+<h1>
 
-<br><br>
+Для моей кисули
 
-Я тебе тут подарочек сделал ❤️
+</h1>
 
-Надеюсь тебе будет приятно и я тебе хоть немного поднял настроение лапка моя 🥹❤️
+
+<div class="text">
+
+Кисуль 🥹❤️
 
 <br><br>
 
-Нажми на сердечко 👇❤️
-</p>
+Я сделал для тебя маленький уголок счастья.
 
-<button class="heartBtn" onclick="openLetter()">
-<div class="heart">❤️</div>
-<div class="btnText">Нажми на меня</div>
+Каждый час тебя будет ждать новое пожелание.
+
+Пусть оно подарит тебе улыбку 💖
+
+</div>
+
+
+<button onclick="openWish()">
+
+💌 Открыть пожелание
+
 </button>
 
-</div>
 
-<div id="page2" class="hidden">
+<div class="timer" id="timer">
 
-<h1>Для тебя, лапка моя ❤️</h1>
-
-<div class="letter">
-
-<p>
-Лапка моя ❤️
-</p>
-
-<p>
-Я просто хочу сказать тебе то, что чувствую каждый день.
-</p>
-
-<p>
-Я очень рад, что встретил именно тебя.
-Правда.
-Это одно из самых лучших событий в моей жизни.
-</p>
-
-<p>
-Я очень благодарен судьбе за то, что она подарила мне тебя 🥹❤️❤️
-</p>
-
-<p>
-Мне нравится твоя улыбка🥹❤️❤️
-Мне нравится твой голос🥹❤️❤️
-Мне нравится твой смех🥹❤️❤️
-Мне нравится всё, что связано с тобой 🥹❤️❤️❤️
-</p>
-
-<p>
-Ты делаешь мои дни лучше просто тем, что ты есть
-Даже обычный день становится особенным, когда я разговариваю с тобой 😭🥹❤️❤️
-</p>
-
-<p>
-И даже когда тебе грустно
-Даже когда всё бесит
-Даже когда тебе тяжело
-Я всё равно хочу быть рядом с тобой лапка моя ❤️
-</p>
-
-<p>
-Я хочу поддерживать тебя
-Обнимать тебя
-Заботиться о тебе
-Радоваться вместе с тобой
-И просто быть рядом 🥹💋
-</p>
-
-<p>
-Я тебя безумно люблю
-Очень сильно люблю
-И буду любить ещё сильнее 🥹❤️❤️
-</p>
-
-<p>
-Пожалуйста помни..
-что бы ни случилось,
-я всегда рядом.
-В хорошие дни.
-В плохие дни.
-В счастливые дни.
-В грустные дни.
-Всегда ❤️
-</p>
-
-<p>
-Спасибо тебе за то, что ты есть у меня 🥹❤️❤️❤️
-</p>
-
-<div class="finish">
-❤️ Я люблю тебя ❤️
-</div>
+Можно открыть сейчас ❤️
 
 </div>
 
-</div>
 
 </div>
+
+
+
+<div class="modal" id="modal">
+
+
+<div class="box">
+
+
+<div class="message" id="message"></div>
+
+
+<button onclick="closeModal()">
+
+Закрыть ❤️
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
 
 <script>
 
-function openLetter(){
 
-document.getElementById("page1").style.display="none";
-document.getElementById("page2").classList.remove("hidden");
+const wishes=[
 
-for(let i=0;i<60;i++){
+"🌸 Пусть твой день будет самым красивым.",
+
+"💖 Улыбнись, потому что ты самая прекрасная.",
+
+"☀️ Желаю тебе отличного настроения.",
+
+"🥰 Помни, что я тебя очень люблю.",
+
+"🌷 Пусть сегодня будет много радости.",
+
+"✨ Пусть исполнится маленькая мечта.",
+
+"💕 Спасибо, что ты есть у меня.",
+
+"🧸 Отправляю тебе самые тёплые объятия.",
+
+"💋 Лови мой виртуальный поцелуй.",
+
+"🌈 Пусть вокруг тебя будут только хорошие люди.",
+
+"🍓 Желаю тебе сладкого дня.",
+
+"❤️ Ты моё самое большое счастье."
+
+];
+
+
+let data = JSON.parse(
+
+localStorage.getItem("love")
+
+)
+
+||
+
+{
+
+time:0,
+
+index:0
+
+};
+
+
+
+function save(){
+
+localStorage.setItem(
+
+"love",
+
+JSON.stringify(data)
+
+);
+
+}
+
+
+
+function openWish(){
+
+
+let now=Date.now();
+
+
+if(
+
+now-data.time < 3600000
+
+&&
+
+data.time!==0
+
+){
+
+let min=Math.ceil(
+
+(3600000-(now-data.time))
+
+/60000
+
+);
+
+
+document.getElementById("message").innerHTML=
+
+"🥹 Следующее пожелание через "
+
++min+
+
+" минут ❤️";
+
+
+document.getElementById("modal").style.display="flex";
+
+
+return;
+
+}
+
+
+document.getElementById("message").innerHTML=
+
+wishes[data.index];
+
+
+document.getElementById("modal").style.display="flex";
+
+
+data.index++;
+
+
+if(data.index>=wishes.length){
+
+data.index=0;
+
+}
+
+
+data.time=now;
+
+
+save();
+
+
+hearts();
+
+
+}
+
+function closeModal(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+
+
+function hearts(){
+
+for(let i=0;i<25;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heartFly";
+
+heart.innerHTML=
+
+Math.random()>0.5
+
+?"❤️"
+
+:"💖";
+
+
+heart.style.left=
+
+Math.random()*100+"vw";
+
+
+heart.style.fontSize=
+
+(20+Math.random()*25)+"px";
+
+
+heart.style.animationDuration=
+
+(3+Math.random()*4)+"s";
+
+
+document.body.appendChild(heart);
+
+
+setTimeout(()=>{
+
+heart.remove();
+
+},6000);
+
+}
+
+}
+
+
+
+
+function updateTimer(){
+
+
+if(data.time===0){
+
+return;
+
+}
+
+
+let left=
+
+3600000-(Date.now()-data.time);
+
+
+
+if(left<=0){
+
+
+document.getElementById("timer").innerHTML=
+
+"💖 Новое пожелание доступно!";
+
+
+return;
+
+}
+
+
+
+let minutes=
+
+Math.floor(left/60000);
+
+
+let seconds=
+
+Math.floor(
+
+(left%60000)/1000
+
+);
+
+
+
+document.getElementById("timer").innerHTML=
+
+"Следующее пожелание через: "
+
++minutes+
+
+" мин "
+
++seconds+
+
+" сек ❤️";
+
+}
+
+
+
+setInterval(updateTimer,1000);
+
+
+
+updateTimer();
+
+
+
+
+/* Первое красивое приветствие */
+
+
+setTimeout(()=>{
+
+
+if(!localStorage.getItem("hello")){
+
+
+document.getElementById("message").innerHTML=
+
+`
+
+<div style="font-size:55px">
+
+🥹❤️
+
+</div>
+
+<br>
+
+Привет, кисуль.
+
+<br><br>
+
+Я сделал это маленькое место только для тебя.
+
+<br><br>
+
+Пусть каждый день у тебя будет повод улыбнуться 💖
+
+`;
+
+
+document.getElementById("modal").style.display="flex";
+
+
+localStorage.setItem(
+
+"hello",
+
+"true"
+
+);
+
+
+}
+
+
+},1200);
+
+
+
+
+
+/* Больше плавающих сердечек */
+
+
+setInterval(()=>{
+
 
 let h=document.createElement("div");
 
-h.className="fallingHeart";
-h.innerHTML="❤️";
 
-h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(15+Math.random()*35)+"px";
-h.style.animationDuration=(3+Math.random()*4)+"s";
+h.className="heartFly";
+
+
+h.innerHTML="💗";
+
+
+h.style.left=
+
+Math.random()*100+"vw";
+
+
+h.style.fontSize="22px";
+
+
+h.style.animationDuration="7s";
+
 
 document.body.appendChild(h);
 
+
+
 setTimeout(()=>{
+
 h.remove();
+
 },7000);
 
-}
 
-}
 
-function createHeart(){
+},1800);
 
-let h=document.createElement("div");
 
-h.className="fallingHeart";
-h.innerHTML="❤️";
 
-h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(15+Math.random()*25)+"px";
-h.style.animationDuration=(5+Math.random()*5)+"s";
 
-document.body.appendChild(h);
 
-setTimeout(()=>{
-h.remove();
-},10000);
+/* Нажатие на сердце */
 
-}
 
-setInterval(createHeart,400);
+document.querySelector(".heart").onclick=function(){
+
+
+hearts();
+
+
+document.getElementById("message").innerHTML=
+
+`
+
+❤️❤️❤️
+
+<br><br>
+
+Секретик:
+
+<br><br>
+
+Ты самая любимая девочка.
+
+<br>
+
+Не забывай улыбаться 🥹
+
+`;
+
+
+document.getElementById("modal").style.display="flex";
+
+
+};
+
+
+
 
 </script>
 
+
 </body>
+
 </html>
