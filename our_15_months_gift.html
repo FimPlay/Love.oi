@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff4f7">
+<title>Наши 1 год и 3 месяца ❤️</title>
+<style>
+  :root { --pink:#ff7898; --deep:#b84469; --cream:#fff8f7; --ink:#593847; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; color:var(--ink); font-family: "Trebuchet MS", system-ui, sans-serif;
+    background:linear-gradient(180deg,#fff4f7 0%,#fffaf6 48%,#f7f2ff 100%);
+    overflow-x:hidden;
+  }
+  .sparkles { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+  .sparkle { position:absolute; bottom:-35px; opacity:.7; animation: floatUp linear infinite; }
+  @keyframes floatUp { from { transform:translateY(0) rotate(0); opacity:0 } 15%{opacity:.7} to {transform:translateY(-115vh) rotate(35deg);opacity:0} }
+  main { position:relative; z-index:1; max-width:720px; margin:auto; padding:24px 16px 48px; }
+  .hero { text-align:center; padding:38px 20px 24px; }
+  .eyebrow { color:var(--deep); font-size:.82rem; letter-spacing:.15em; text-transform:uppercase; font-weight:800; }
+  h1 { font-size:clamp(2.1rem,9vw,4.1rem); line-height:1.05; margin:16px 0 12px; color:#c64f76; }
+  .subtitle { font-size:1.05rem; line-height:1.7; margin:0 auto; max-width:490px; }
+  .heart { font-size:4rem; display:inline-block; margin-top:18px; filter:drop-shadow(0 7px 12px #ff9ab055); animation: heartbeat 1.5s ease-in-out infinite; }
+  @keyframes heartbeat { 0%,100%{transform:scale(1)} 15%{transform:scale(1.12)} 30%{transform:scale(1)} 45%{transform:scale(1.08)} }
+  .date-pill { display:inline-block; margin-top:15px; background:#fff; border:1px solid #ffe0e8; border-radius:999px; padding:10px 16px; box-shadow:0 8px 24px #c95a7810; font-weight:700; }
+  .card { background:#ffffffd9; border:1px solid #ffe2ea; border-radius:26px; padding:24px 21px; box-shadow:0 16px 40px #8e3c5910; margin:16px 0; }
+  .card h2 { color:#bf4d73; font-size:1.35rem; margin:0 0 12px; }
+  .letter { font-size:1.04rem; line-height:1.9; white-space:normal; }
+  .letter p { margin:0 0 16px; }
+  .letter p:last-child { margin-bottom:0; }
+  .reveal-wrap { text-align:center; padding:10px 0 22px; }
+  button { border:0; border-radius:999px; padding:16px 22px; font-size:1rem; font-weight:800; color:white; background:linear-gradient(135deg,#ff83a0,#d9567d); box-shadow:0 10px 24px #d9567d35; cursor:pointer; }
+  button:active { transform:scale(.98); }
+  #letterCard { display:none; animation: appear .8s ease both; }
+  #letterCard.show { display:block; }
+  @keyframes appear { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
+  .promise { text-align:center; color:#9b4263; font-weight:700; font-size:1.02rem; line-height:1.8; }
+  .signature { text-align:center; font-size:1.15rem; color:#bf4d73; font-weight:800; padding:18px 8px 6px; }
+  .tiny { text-align:center; opacity:.72; font-size:.83rem; margin-top:18px; }
+  .divider { text-align:center; color:#ed8aa5; letter-spacing:.5rem; padding:4px; }
+  @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation:none !important; scroll-behavior:auto !important; } }
+</style>
+</head>
+<body>
+<div class="sparkles" id="sparkles" aria-hidden="true"></div>
+<main>
+  <section class="hero">
+    <div class="eyebrow">12 июля · наша дата</div>
+    <h1>1 год и<br>3 месяца</h1>
+    <p class="subtitle">Ещё один кусочек нашей истории, который я очень хочу бережно хранить. ❤️</p>
+    <div class="heart">💗</div><br>
+    <div class="date-pill">457 дней вместе и дальше — шаг за шагом</div>
+  </section>
+
+  <div class="divider">♡ · ♡ · ♡</div>
+  <section class="card">
+    <h2>Для моей Кисули 🥹❤️</h2>
+    <p class="letter">Сегодня у нас уже 1 год и 3 месяца, любимая. Для кого-то это просто цифра, а для меня за ней стоит очень многое: наши разговоры, улыбки, нежность, воспоминания, моменты, которые хочется переживать снова и снова. И самое главное — это ты, моя родная. Я очень сильно тебя обожаю и ценю то, что ты есть в моей жизни. ❤️</p>
+  </section>
+
+  <div class="reveal-wrap">
+    <p>Я приготовил для тебя ещё кое-что, родная…</p>
+    <button id="revealBtn" type="button">Нажми, моя любимая 💌</button>
+  </div>
+
+  <section class="card" id="letterCard" aria-live="polite">
+    <h2>Маленькое письмо от всего сердца 💌</h2>
+    <div class="letter">
+      <p>Кисуль, я хочу, чтобы ты знала, насколько ты мне дорога. 🥹❤️ Ты для меня не просто любимая девочка — ты человек, с которым мне хочется делиться своими днями, строить планы, мечтать о нашей встрече и создавать ещё много тёплых воспоминаний. Я обожаю твою улыбку, твою доброту, твою красоту, твою творческую сторону и то, как по-особенному ты умеешь быть собой.</p>
+      <p>Я знаю, что у нас не всегда всё бывает легко. Иногда мы не понимаем друг друга, можем обидеть друг друга и устаём от ссор. Но я очень хочу стараться изо всех сил, чтобы у нас всё наладилось и получилось. Не просто говорить красивые слова, а учиться лучше слышать тебя, внимательнее относиться к твоим чувствам, выполнять то, что обещаю, и показывать свою любовь поступками. Я хочу, чтобы рядом со мной тебе становилось спокойнее и теплее, а не тяжелее.</p>
+      <p>Моя любимая, пожалуйста, всегда оставайся такой же доброй, красивой, нежной, творческой и удивительной девочкой. Не теряй свой свет, свои идеи, свои мечты и то особенное, что делает тебя именно тобой. Я буду очень рад видеть, как ты растёшь, творишь, радуешься своим успехам и становишься ещё счастливее. А я хочу учиться быть для тебя человеком, на которого можно положиться.</p>
+      <p>Спасибо тебе за эти 1 год и 3 месяца, за всё хорошее, что уже есть в нашей истории. Я не жду, что всё изменится за один день, но я правда хочу вкладываться в нас и делать свою часть, день за днём. Мне очень хочется, чтобы впереди у нас было больше нежности, спокойных разговоров, искренних улыбок, совместных планов и счастливых моментов.</p>
+      <p>Я очень-очень сильно тебя люблю, моя самая-самая любимая Кисуля. Ты моё солнышко, моя лапочка и моя родная девочка. Обнимаю тебя крепко-крепко и целую в твои щёчки. 🥹❤️❤️❤️💋</p>
+    </div>
+    <div class="divider">♡ · ♡ · ♡</div>
+    <p class="promise">Я хочу не только говорить тебе о любви,<br>но и каждый день учиться показывать её. ❤️</p>
+    <div class="signature">С нашей датой, моя любимая 💗</div>
+  </section>
+  <p class="tiny">Сделано с любовью — для тебя и только для тебя ♡</p>
+</main>
+<script>
+  const symbols = ["♡","♥","✧","💗","✨"];
+  const layer = document.getElementById("sparkles");
+  for (let i = 0; i < 22; i++) {
+    const item = document.createElement("span");
+    item.className = "sparkle";
+    item.textContent = symbols[i % symbols.length];
+    item.style.left = (Math.random() * 100) + "%";
+    item.style.fontSize = (12 + Math.random() * 17) + "px";
+    item.style.animationDuration = (9 + Math.random() * 12) + "s";
+    item.style.animationDelay = (-Math.random() * 18) + "s";
+    layer.appendChild(item);
+  }
+  const button = document.getElementById("revealBtn");
+  const letter = document.getElementById("letterCard");
+  button.addEventListener("click", () => {
+    letter.classList.add("show");
+    button.textContent = "Обнимаю тебя, Кисуль ❤️";
+    button.disabled = true;
+    letter.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+</script>
+</body>
+</html>
